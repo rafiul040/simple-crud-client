@@ -2,11 +2,14 @@
 import './App.css'
 import Users from './Components/Users'
 
+
+
+const usersPromise = fetch('http://localhost:3000/users').then(res => res.json());
 function App() {
 
   return (
     <>
-      <Users></Users>
+      <Users usersPromise={usersPromise}></Users>
     </>
   )
 }
